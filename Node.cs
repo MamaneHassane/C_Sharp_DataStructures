@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace C_Sharp_DataStructures
 {
-    class Node<T> (T value) 
+    class Node<T>
     {
+        public Node(T value)
+        {
+            this.Value = value;
+        }
+        public Node()
+        {
 
+        }
         // La valeur dans le noeud
-        private T? Value = value;
+        public T? Value { get; set; }
         // Le noeud suivant
-        private Node<T>? Next { get; set; }
+        public Node<T>? Next { get; set; }
 
         // Fonction pour afficher le noeud
         public override string ToString()
