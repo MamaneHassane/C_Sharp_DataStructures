@@ -57,10 +57,10 @@ namespace C_Sharp_DataStructures
             }
             else 
             {
-                Top = new Node<T>(value)
-                {
-                    Next = node
-                };
+            Top = new Node<T>(value)
+            {
+                Next = node
+            };
             }
             // Incrémenter la taille
             Size++;
