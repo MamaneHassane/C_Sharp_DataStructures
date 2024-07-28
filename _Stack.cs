@@ -78,6 +78,7 @@ namespace C_Sharp_DataStructures
                 if(Size<0) Size--;
             }
         }
+
         // Fonction pour retourner le sommet de la pile
         public T? Head()
         {
