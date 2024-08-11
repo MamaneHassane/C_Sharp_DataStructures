@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp_DataStructures
+namespace C_Sharp_DataStructures.Classics
 {
     class _LinkedList<T>
     {
@@ -36,7 +36,7 @@ namespace C_Sharp_DataStructures
             {
                 sb.Append("{ ");
                 int count = 0;
-                if (Size==1)
+                if (Size == 1)
                     sb.Append(Node.ToString());
                 else
                 {
@@ -56,7 +56,7 @@ namespace C_Sharp_DataStructures
         // Fonction pour ajouter un élément à la liste
         public void Add(T value)
         {
-            if(Empty())
+            if (Empty())
             {
                 Node = new(value);
             }
@@ -73,7 +73,7 @@ namespace C_Sharp_DataStructures
         }
 
         // Fonction pour trouver un élément de la liste par son index
-        public T? Get(int index) 
+        public T? Get(int index)
         {
             if (index < 0 || index >= Size)
             {
@@ -82,7 +82,7 @@ namespace C_Sharp_DataStructures
             }
             // Si l'index est égal à 0
             int count = 0;
-            if(index == count) return Node.Value;
+            if (index == count) return Node.Value;
             Node<T>? node = Node;
             while (node.Next is not null && count < Size)
             {
@@ -118,7 +118,7 @@ namespace C_Sharp_DataStructures
             }
             int count = 0;
             // Si l'index est égal à 0
-            if(index == count)
+            if (index == count)
             {
                 Node<T>? toDelete = Node;
                 Node = Node.Next;
@@ -129,13 +129,13 @@ namespace C_Sharp_DataStructures
             Node<T>? node = Node;
             while (node.Next is not null && count + 1 < Size)
             {
-                if (count + 1 == index) 
+                if (count + 1 == index)
                 {
                     Node<T>? toDelete = node.Next;
                     node.Next = node.Next.Next;
                     toDelete = null;
                     return true;
-                } 
+                }
                 node = node.Next;
                 count++;
             }
@@ -151,7 +151,7 @@ namespace C_Sharp_DataStructures
             // Trouver l'index
             int index = GetIndexOf(value);
             // Supprimer par index pour ne pas repéter du code
-            return Remove(index);            
+            return Remove(index);
         }
     }
 }

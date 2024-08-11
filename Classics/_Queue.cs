@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp_DataStructures
+namespace C_Sharp_DataStructures.Classics
 {
     class _Queue<T>
     {
@@ -15,7 +15,7 @@ namespace C_Sharp_DataStructures
         // La taille de la file 
         private int Size { get; set; } = 0;
 
-        public _Queue() 
+        public _Queue()
         {
             Head = Tail;
         }
@@ -29,7 +29,7 @@ namespace C_Sharp_DataStructures
         // Fonction pour afficher la file
         public override string ToString()
         {
-            if(Empty())
+            if (Empty())
             {
                 return "La file est vide.";
             }
@@ -72,7 +72,7 @@ namespace C_Sharp_DataStructures
         // Fonction pour rétirer un élément de la queue
         public void Pop()
         {
-            if(Head == Tail)
+            if (Head == Tail)
             {
                 Head.Value = Tail.Value = default;
             }

@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using C_Sharp_DataStructures;
+using C_Sharp_DataStructures.Binary_Search_Tree;
+using C_Sharp_DataStructures.Classics;
 using System;
 
 Console.WriteLine("Hello, World!");
@@ -8,27 +9,25 @@ Node<string> node = new("HassaneMamane");
 
 Console.WriteLine(node);
 
-_LinkedList<int> list = new();
+_BinarySearchTree<int> tree = new();
 
-list.Add(1);
-list.Add(2);    
-list.Add(3);
-list.Add(-4);
-Console.WriteLine(list);
-Console.WriteLine($"Taille de la liste {list.Count()} ");
-list.RemoveValue(3);
-Console.WriteLine(list);
-list.RemoveValue(1);
-Console.WriteLine(list);
-list.RemoveValue(-4);
-Console.WriteLine(list);
-list.Add(8);
-list.Add(-5);
-Console.WriteLine(list);
-list.Remove(2);
-Console.WriteLine(list);
-list.Add(4);
-list.Add(-1);
-Console.WriteLine(list);
-Console.WriteLine($"Index de -1 : {list.GetIndexOf(-1)} ");
-Console.WriteLine($"Valeur à l'index 4 : {list.Get(4)}");
+tree.Add(1);
+tree.Add(2);    
+tree.Add(3);
+tree.Add(-4);
+Console.WriteLine(tree);
+Console.WriteLine($"Taille de la treee {tree.Count()} ");
+tree.Remove(3);
+Console.WriteLine(tree);
+tree.Remove(1);
+Console.WriteLine(tree);
+tree.Remove(-4);
+Console.WriteLine(tree);
+tree.Add(8);
+tree.Add(-5);
+Console.WriteLine(tree);
+tree.Remove(2);
+Console.WriteLine(tree);
+tree.Add(4);
+tree.Add(-1);
+Console.WriteLine(tree);

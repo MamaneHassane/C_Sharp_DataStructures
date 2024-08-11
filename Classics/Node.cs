@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp_DataStructures
+namespace C_Sharp_DataStructures.Classics
 {
     class Node<T>
     {
         public Node(T value)
         {
-            this.Value = value;
+            Value = value;
         }
         public Node()
         {
@@ -24,7 +24,7 @@ namespace C_Sharp_DataStructures
         // Fonction pour afficher le noeud
         public override string ToString()
         {
-            return Next is null ?  $"{Value} " : $"{Value} --> ";
+            return Next is null ? $"{Value} " : $"{Value} --> ";
         }
     }
 }

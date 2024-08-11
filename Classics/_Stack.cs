@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Sharp_DataStructures
+namespace C_Sharp_DataStructures.Classics
 {
     class _Stack<T>()
     {
@@ -17,7 +17,7 @@ namespace C_Sharp_DataStructures
         public override string ToString()
         {
             StringBuilder sb = new();
-            if (Empty()) 
+            if (Empty())
             {
                 return "La pile est vide";
             }
@@ -25,7 +25,7 @@ namespace C_Sharp_DataStructures
             {
                 sb.Append("{ ");
                 Node<T>? node = Top;
-                while ( node != null)
+                while (node != null)
                 {
                     sb.Append(node.ToString());
                     node = node.Next;
@@ -51,16 +51,16 @@ namespace C_Sharp_DataStructures
         public void Push(T value)
         {
             Node<T>? node = Top;
-            if (Size == 0) 
+            if (Size == 0)
             {
                 Top.Value = value;
             }
-            else 
+            else
             {
-            Top = new Node<T>(value)
-            {
-                Next = node
-            };
+                Top = new Node<T>(value)
+                {
+                    Next = node
+                };
             }
             // Incrémenter la taille
             Size++;
@@ -75,7 +75,7 @@ namespace C_Sharp_DataStructures
                 Top = Top.Next;
                 node = null;
                 // Décrémenter la taille
-                if(Size<0) Size--;
+                if (Size < 0) Size--;
             }
         }
 
